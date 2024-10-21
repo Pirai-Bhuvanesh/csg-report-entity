@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>File Metadata Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-color: #f0f0f0; /* Light background for contrast */
+        }
+        .container {
+            width: 60%;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff; /* White background for the box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+        h2 {
+            color: #2F4F4F;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .content .bold {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .footer {
+            font-size: 18px;
+            color: #555;
+            margin-top: 40px;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .footer .line {
+            border-top: 2px solid #2F4F4F;
+            margin: 10px 0;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-container">
+        <img src="cid:logo" alt="Logo"/>
+    </div>
+
+    <h2>Antivirus Update Report</h2>
+
+    <div class="content">
+        <p><span class="bold">Date:</span> <span th:text="${date}">2024-08-23</span></p>
+        <p><span class="bold">File Name:</span> <span th:text="${fileName}">Example.csv</span></p>
+        <p><span class="bold">Total Count:</span> <span th:text="${totalCount}">100</span></p>
+        <p><span class="bold">Total Non Required:</span> <span th:text="${totalNonRequired}">20</span></p>
+        <p><span class="bold">Total Email Sent:</span> <span th:text="${totalEmailSent}">80</span></p>
+    </div>
+
+    <div class="footer">
+        <div class="line"></div>
+        <p>Many Thanks,</p>
+        <p>The Caresoft Team</p>
+    </div>
+</div>
+
+</body>
+</html>

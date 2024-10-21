@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Email Template</title>
+</head>
+<body>
+<p>Hi <strong th:text="${username}"></strong>,</p>
+<p>We see that your computer's antivirus application is not current.</p>
+<p>Please share your System TeamViewer ID and Password, so we can take your system remotely and perform the update.</p><br/>
+<h3 style="text-decoration: underline;">System details:</h3><br/>
+<table border="1" cellpadding="10" cellspacing="0">
+    <tr style="background-color: #000080; color: white; font-weight: bold;">
+        <th>Asset ID</th>
+        <th>Serial Number</th>
+        <th>Make</th>
+        <th>Model</th>
+        <th>Assigned to</th>
+    </tr>
+    <!-- Empty row below the table headers -->
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table><br/>
+
+<h3 style="text-decoration: underline;">How to find my TeamViewer ID:</h3>
+<p>You can find the TeamViewer application on your Windows desktop.</p><br/>
+
+<img src="cid:teamViewerImage" alt="Team Viewer"/><br/>
+
+<p><strong>OR</strong></p>
+<p>You can find the TeamViewer application in Start Menu -> Search Window (as shown below)</p><br/>
+<img src="cid:startmenusearch" alt="Start Menu"/><br/>
+<p>Thanks and Regards,<br/>Admin Team</p>
+</body>
+</html>
