@@ -1,4 +1,4 @@
-package com.csg.entity.utils;
+package com.csg.entity.util;
 
 import com.csg.entity.payload.response.ApiResponse;
 import org.springframework.context.MessageSource;
