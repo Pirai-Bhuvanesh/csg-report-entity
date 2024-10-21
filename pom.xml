@@ -9,6 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.csg.entity</groupId>
     <artifactId>csg-report-entity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <properties>
