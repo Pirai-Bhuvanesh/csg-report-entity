@@ -1,0 +1,4 @@
+[submodule "csg-report-entity"]
+	path = csg-report-entity
+	url = https://github.com/Pirai-Bhuvanesh/csg-report-entity.git
+	branch = develop

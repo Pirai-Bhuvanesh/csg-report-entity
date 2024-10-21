@@ -1,4 +1,4 @@
-package com.csg.entity.util;
+package com.csg.entity.utils;
 
 public class MessageKeyConstants {
 

@@ -1,7 +1,7 @@
 package com.csg.entity.exception;
 import com.csg.entity.payload.response.ApiResponse;
-import com.csg.entity.util.CommonUtils;
-import com.csg.entity.util.MessageKeyConstants;
+import com.csg.entity.utils.CommonUtils;
+import com.csg.entity.utils.MessageKeyConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

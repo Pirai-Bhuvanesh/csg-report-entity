@@ -1,4 +1,4 @@
-package com.csg.entity.util.enums;
+package com.csg.entity.utils.enums;
 
 import lombok.Getter;
 

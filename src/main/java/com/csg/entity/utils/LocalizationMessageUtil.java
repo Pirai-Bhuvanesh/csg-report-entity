@@ -1,4 +1,4 @@
-package com.csg.entity.util;
+package com.csg.entity.utils;
 
 import org.springframework.context.MessageSource;
 

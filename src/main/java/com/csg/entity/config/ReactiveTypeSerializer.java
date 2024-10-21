@@ -1,6 +1,6 @@
 package com.csg.entity.config;
 
-import com.csg.entity.util.CsgConstants;
+import com.csg.entity.utils.CsgConstants;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;

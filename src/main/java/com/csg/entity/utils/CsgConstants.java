@@ -1,6 +1,4 @@
-package com.csg.entity.util;
-
-import java.math.BigDecimal;
+package com.csg.entity.utils;
 
 public interface CsgConstants {
     String ENGLISH = "en";
