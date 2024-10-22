@@ -19,7 +19,7 @@ public class CommonUtils {
 	private static final Pattern MOBILE_NUMBER_PATTERN = Pattern.compile(MOBILE_NUMBER_REGEX);
 
 	// Private constructor to prevent instantiation
-	private CommonUtils() {
+	CommonUtils() {
 		throw new UnsupportedOperationException("Utility class cannot be instantiated");
 	}
 
@@ -62,8 +62,14 @@ public class CommonUtils {
 
 	public static String getMessageInfo(Locale locale, String messageKey, MessageSource messageSource) {
 		LocalizationMessageUtil instance = LocalizationMessageUtil.getInstance();
-		return instance.getMessageInfo(locale, messageKey, messageSource);
+		try {
+			return instance.getMessageInfo(locale, messageKey, messageSource);
+		} catch (Exception e) {
+			// Log the exception (optional) and return a fallback message
+			return "Message not found"; // Or any appropriate default value
+		}
 	}
+
 
 	public static Locale getLocaly() {
 		return new Locale.Builder()

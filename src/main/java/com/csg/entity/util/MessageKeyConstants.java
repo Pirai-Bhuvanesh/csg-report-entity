@@ -4,7 +4,7 @@ public class MessageKeyConstants {
 
     public static final String MAP_COLUMN = "map.column";
 
-    private MessageKeyConstants() {
+    MessageKeyConstants() {
 		throw new UnsupportedOperationException("Utility class");
 	}
 	public static final String ERROR_CODE_401 = "error.code.401";

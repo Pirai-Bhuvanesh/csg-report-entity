@@ -45,7 +45,7 @@ public final class CsgConstants {
     public static final String ERROR_READING_CSV_FILE = "Error reading CSV file: %s";
 
     // Private constructor to prevent instantiation
-    private CsgConstants() {
+    CsgConstants() {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 }
