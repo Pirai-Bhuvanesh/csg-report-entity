@@ -1,5 +1,6 @@
 package com.csg.entity.config;
 
+import com.csg.entity.exception.MonoFluxSerializationException;
 import com.csg.entity.util.CsgConstants;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -26,12 +27,12 @@ public class ReactiveTypeSerializer extends StdSerializer<Object> {
         }
     }
 
-    private void serializeMono(Mono<?> mono, JsonGenerator jsonGenerator) throws IOException {
+    private void serializeMono(Mono<?> mono, JsonGenerator jsonGenerator){
         mono.subscribe(monoValue -> {
             try {
                 jsonGenerator.writeObject(monoValue);
             } catch (IOException e) {
-                throw new RuntimeException(CsgConstants.FAILED_SERIALIZE_MONO, e);
+                throw new MonoFluxSerializationException(CsgConstants.FAILED_SERIALIZE_MONO, e);
             }
         });
     }
@@ -42,7 +43,7 @@ public class ReactiveTypeSerializer extends StdSerializer<Object> {
             try {
                 jsonGenerator.writeObject(fluxValue);
             } catch (IOException e) {
-                throw new RuntimeException(CsgConstants.FAILED_SERIALIZE_FLUX, e);
+                throw new MonoFluxSerializationException(CsgConstants.FAILED_SERIALIZE_FLUX, e);
             }
         });
         jsonGenerator.writeEndArray();

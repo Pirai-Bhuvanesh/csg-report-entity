@@ -13,4 +13,8 @@ public class ApiResponse {
 
     private String statusCode;
 
+    public boolean isStatus() {
+        return status != null && status; // Handle potential null case
+    }
+
 }

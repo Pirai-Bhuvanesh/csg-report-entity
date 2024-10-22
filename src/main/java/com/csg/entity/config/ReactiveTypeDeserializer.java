@@ -32,7 +32,6 @@ public class ReactiveTypeDeserializer extends StdDeserializer<Object> {
 
     private Flux<?> deserializeFlux(JsonNode node, DeserializationContext deserializationContext) throws IOException {
         JsonParser parser = node.traverse(deserializationContext.getParser().getCodec());
-        Flux<Object> flux = Flux.fromArray(parser.readValueAs(Object[].class));
-        return flux;
+        return Flux.fromArray(parser.readValueAs(Object[].class));
     }
 }
