@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CsgConstants.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">csg-report-entity</a> &gt; <a href="index.source.html" class="el_package">com.csg.entity.util</a> &gt; <span class="el_source">CsgConstants.java</span></div><h1>CsgConstants.java</h1><pre class="source lang-java linenums">package com.csg.entity.util;
+
+public final class CsgConstants {
+
+    // Language and country constants
+    public static final String ENGLISH = &quot;en&quot;;
+    public static final String COUNTRY = &quot;US&quot;;
+
+    // S3 file extensions
+    public static final String S3_JPG = &quot;.jpg&quot;;
+    public static final String S3_JPEG = &quot;.jpeg&quot;;
+    public static final String S3_PNG = &quot;.png&quot;;
+    public static final String S3_GIF = &quot;.gif&quot;;
+    public static final String S3_PDF = &quot;.pdf&quot;;
+
+    // S3 MIME types
+    public static final String S3_IMAGE_JPEG = &quot;image/jpeg&quot;;
+    public static final String S3_IMAGE_PNG = &quot;image/png&quot;;
+    public static final String S3_IMAGE_GIF = &quot;image/gif&quot;;
+    public static final String S3_APPLICATION_PDF = &quot;application/pdf&quot;;
+    public static final String S3_APPLICATION_OCTET_STREAM = &quot;application/octet-stream&quot;;
+
+    // Reactive error messages
+    public static final String UNSUPPORTED_REACTIVE_TYPE = &quot;Unsupported reactive type: &quot;;
+    public static final String FAILED_SERIALIZE_MONO = &quot;Failed to serialize Mono&quot;;
+    public static final String FAILED_SERIALIZE_FLUX = &quot;Failed to serialize Flux&quot;;
+
+    // Timezone
+    public static final String ZONE = &quot;Asia/Kolkata&quot;;
+
+    // Mail configuration properties
+    public static final String PROTOCOL = &quot;mail.transport.protocol&quot;;
+    public static final String AUTH = &quot;mail.smtp.auth&quot;;
+    public static final String STARTTLS_ENABLE = &quot;mail.smtp.starttls.enable&quot;;
+    public static final String DEBUG = &quot;mail.debug&quot;;
+
+    // Processing statuses
+    public static final String UNPROCESSED = &quot;UnProcessed&quot;;
+    public static final String PROCESSED = &quot;Processed&quot;;
+
+    // Error messages
+    public static final String ERROR_COLUMN_ID_NOT_FOUND = &quot;Error: Column ID '%s' not found in columns.&quot;;
+    public static final String ERROR_ROW_DOES_NOT_CONTAIN_ENOUGH_COLUMNS = &quot;Error: Row does not contain enough columns for rule '%s'.&quot;;
+    public static final String ERROR_COLUMN_INVALID_VALUE = &quot;Error in column '%s': Value '%s' is invalid according to rule %s.&quot;;
+    public static final String ERROR_READING_CSV_FILE = &quot;Error reading CSV file: %s&quot;;
+
+    // Private constructor to prevent instantiation
+<span class="nc" id="L48">    private CsgConstants() {</span>
+<span class="nc" id="L49">        throw new UnsupportedOperationException(&quot;This is a utility class and cannot be instantiated&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

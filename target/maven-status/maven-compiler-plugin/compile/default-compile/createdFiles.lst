@@ -10,6 +10,7 @@ com\csg\entity\persistence\repository\ReportsRepository.class
 com\csg\entity\persistence\repository\ReportRulesRepository.class
 com\csg\entity\util\LocalizationMessageUtil.class
 com\csg\entity\persistence\repository\ReportColumnRepository.class
+com\csg\entity\exception\MonoFluxSerializationException.class
 com\csg\entity\persistence\entity\ReportsEntity.class
 com\csg\entity\persistence\entity\TemplatesEntity.class
 com\csg\entity\config\DBConfig.class

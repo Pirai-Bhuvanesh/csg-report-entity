@@ -27,3 +27,4 @@ D:\cgs\csg-report-entity\src\main\java\com\csg\entity\persistence\entity\Reports
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\util\enums\Status.java
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\persistence\entity\TemplatesEntity.java
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\persistence\repository\ReportColumnRepository.java
+D:\cgs\csg-report-entity\src\main\java\com\csg\entity\exception\MonoFluxSerializationException.java

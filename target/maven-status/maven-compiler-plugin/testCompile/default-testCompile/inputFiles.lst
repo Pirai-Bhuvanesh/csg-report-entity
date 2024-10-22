@@ -1,5 +1,4 @@
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\config\ReactiveTypeSerializerTests.java
-D:\cgs\csg-report-entity\src\test\java\com\csg\entity\exception\CustomizedResponseEntityExceptionHandlerTests.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\exception\ResourceNotFoundExceptionTests.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\MethodRulesEntityTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\ReportsRequestListEntityTest.java
@@ -14,6 +13,7 @@ D:\cgs\csg-report-entity\src\test\java\com\csg\entity\util\enums\MailStatusTest.
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\config\JacksonConfigurationTests.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\payload\response\ApiResponseTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\ReportMetaDataDetailsEntityTest.java
+D:\cgs\csg-report-entity\src\test\java\com\csg\entity\exception\MonoFluxSerializationExceptionTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\config\ReactiveTypeDeserializerTests.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\ReportsEntityTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\ReportRulesEntityTest.java

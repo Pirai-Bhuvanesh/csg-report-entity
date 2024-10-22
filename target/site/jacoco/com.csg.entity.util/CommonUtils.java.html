@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CommonUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">csg-report-entity</a> &gt; <a href="index.source.html" class="el_package">com.csg.entity.util</a> &gt; <span class="el_source">CommonUtils.java</span></div><h1>CommonUtils.java</h1><pre class="source lang-java linenums">package com.csg.entity.util;
+
+import com.csg.entity.payload.response.ApiResponse;
+import org.springframework.context.MessageSource;
+import org.springframework.http.HttpStatus;
+
+import java.security.SecureRandom;
+import java.util.Locale;
+import java.util.regex.Pattern;
+
+public class CommonUtils {
+
+	private static final String CHARACTERS = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&quot;;
+<span class="fc" id="L14">	private static final SecureRandom random = new SecureRandom();</span>
+	private static final String EMAIL_REGEX = &quot;^[\\w&amp;*-]+(?:\\.[\\w&amp;*-]+)*@[\\w-]+(?:\\.[\\w-]+)+$&quot;;
+	private static final String MOBILE_NUMBER_REGEX = &quot;^\\+91[6-9]\\d{9}$&quot;;
+
+<span class="fc" id="L18">	private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);</span>
+<span class="fc" id="L19">	private static final Pattern MOBILE_NUMBER_PATTERN = Pattern.compile(MOBILE_NUMBER_REGEX);</span>
+
+	// Private constructor to prevent instantiation
+<span class="nc" id="L22">	private CommonUtils() {</span>
+<span class="nc" id="L23">		throw new UnsupportedOperationException(&quot;Utility class cannot be instantiated&quot;);</span>
+	}
+
+	public static boolean isValidEmail(String email) {
+<span class="fc bfc" id="L27" title="All 4 branches covered.">		return email != null &amp;&amp; EMAIL_PATTERN.matcher(email).matches();</span>
+	}
+
+	public static boolean isValidIndianMobileNumber(String mobileNumber) {
+<span class="fc bfc" id="L31" title="All 4 branches covered.">		return mobileNumber != null &amp;&amp; MOBILE_NUMBER_PATTERN.matcher(mobileNumber).matches();</span>
+	}
+
+	public static &lt;T extends ApiResponse&gt; T buildResponse(String messageKey, MessageSource messageSource,
+														  HttpStatus httpStatus, T response, boolean isSuccess) {
+<span class="fc" id="L36">		Locale locale = getLocaly();</span>
+<span class="fc" id="L37">		response.setMessage(getMessageInfo(locale, messageKey, messageSource));</span>
+<span class="fc" id="L38">		response.setStatus(isSuccess);</span>
+<span class="fc" id="L39">		response.setStatusCode(String.valueOf(httpStatus.value()));</span>
+<span class="fc" id="L40">		return response;</span>
+	}
+
+	public static &lt;T extends ApiResponse&gt; T buildSuccessResponse(String messageKey, MessageSource messageSource,
+																 HttpStatus httpStatus, T response) {
+<span class="fc" id="L45">		return buildResponse(messageKey, messageSource, httpStatus, response, true);</span>
+	}
+
+	public static &lt;T extends ApiResponse&gt; T buildFailureResponse(String messageKey, MessageSource messageSource,
+																 HttpStatus httpStatus, T response) {
+<span class="fc" id="L50">		return buildResponse(messageKey, messageSource, httpStatus, response, false);</span>
+	}
+
+	public static &lt;T extends ApiResponse&gt; T buildFailureResponseBadRequest(String messageKey, MessageSource messageSource,
+																		   HttpStatus httpStatus, T response) {
+<span class="nc" id="L55">		return buildFailureResponse(messageKey, messageSource, httpStatus, response);</span>
+	}
+
+	public static &lt;T extends ApiResponse&gt; T buildFailureResponseResourceNotFound(String messageKey, MessageSource messageSource,
+																				 HttpStatus httpStatus, T response) {
+<span class="nc" id="L60">		return buildFailureResponse(messageKey, messageSource, httpStatus, response);</span>
+	}
+
+	public static String getMessageInfo(Locale locale, String messageKey, MessageSource messageSource) {
+<span class="fc" id="L64">		LocalizationMessageUtil instance = LocalizationMessageUtil.getInstance();</span>
+<span class="fc" id="L65">		return instance.getMessageInfo(locale, messageKey, messageSource);</span>
+	}
+
+	public static Locale getLocaly() {
+<span class="fc" id="L69">		return new Locale.Builder()</span>
+<span class="fc" id="L70">				.setLanguage(CsgConstants.ENGLISH)</span>
+<span class="fc" id="L71">				.setRegion(CsgConstants.COUNTRY)</span>
+<span class="fc" id="L72">				.build();</span>
+	}
+
+
+	public static String generateToken(int tokenLength) {
+<span class="fc" id="L77">		StringBuilder token = new StringBuilder(tokenLength);</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">		for (int i = 0; i &lt; tokenLength; i++) {</span>
+<span class="fc" id="L79">			int index = random.nextInt(CHARACTERS.length());</span>
+<span class="fc" id="L80">			token.append(CHARACTERS.charAt(index));</span>
+		}
+<span class="fc" id="L82">		return token.toString();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

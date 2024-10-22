@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReactiveTypeSerializer.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">csg-report-entity</a> &gt; <a href="index.source.html" class="el_package">com.csg.entity.config</a> &gt; <span class="el_source">ReactiveTypeSerializer.java</span></div><h1>ReactiveTypeSerializer.java</h1><pre class="source lang-java linenums">package com.csg.entity.config;
+
+import com.csg.entity.exception.MonoFluxSerializationException;
+import com.csg.entity.util.CsgConstants;
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.ser.std.StdSerializer;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+import java.io.IOException;
+
+public class ReactiveTypeSerializer extends StdSerializer&lt;Object&gt; {
+
+    protected ReactiveTypeSerializer() {
+<span class="fc" id="L16">        super(Object.class);</span>
+<span class="fc" id="L17">    }</span>
+
+    @Override
+    public void serialize(Object value, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        if (value instanceof Mono) {</span>
+<span class="fc" id="L22">            serializeMono((Mono&lt;?&gt;) value, jsonGenerator);</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        } else if (value instanceof Flux) {</span>
+<span class="fc" id="L24">            serializeFlux((Flux&lt;?&gt;) value, jsonGenerator);</span>
+        } else {
+<span class="fc" id="L26">            throw new IllegalArgumentException(CsgConstants.UNSUPPORTED_REACTIVE_TYPE + value.getClass().getName());</span>
+        }
+<span class="fc" id="L28">    }</span>
+
+    private void serializeMono(Mono&lt;?&gt; mono, JsonGenerator jsonGenerator){
+<span class="fc" id="L31">        mono.subscribe(monoValue -&gt; {</span>
+            try {
+<span class="fc" id="L33">                jsonGenerator.writeObject(monoValue);</span>
+<span class="nc" id="L34">            } catch (IOException e) {</span>
+<span class="nc" id="L35">                throw new MonoFluxSerializationException(CsgConstants.FAILED_SERIALIZE_MONO, e);</span>
+<span class="fc" id="L36">            }</span>
+<span class="fc" id="L37">        });</span>
+<span class="fc" id="L38">    }</span>
+
+    private void serializeFlux(Flux&lt;?&gt; flux, JsonGenerator jsonGenerator) throws IOException {
+<span class="fc" id="L41">        jsonGenerator.writeStartArray();</span>
+<span class="fc" id="L42">        flux.subscribe(fluxValue -&gt; {</span>
+            try {
+<span class="fc" id="L44">                jsonGenerator.writeObject(fluxValue);</span>
+<span class="nc" id="L45">            } catch (IOException e) {</span>
+<span class="nc" id="L46">                throw new MonoFluxSerializationException(CsgConstants.FAILED_SERIALIZE_FLUX, e);</span>
+<span class="fc" id="L47">            }</span>
+<span class="fc" id="L48">        });</span>
+<span class="fc" id="L49">        jsonGenerator.writeEndArray();</span>
+<span class="fc" id="L50">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
