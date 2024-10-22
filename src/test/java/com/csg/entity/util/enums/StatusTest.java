@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class StatusTest {
 
     @Test
-    public void testEnumValues() {
+    void testEnumValues() {
         // Verify enum values exist
         assertNotNull(Status.YET_TO_START);
         assertNotNull(Status.IN_PROGRESS);
@@ -20,7 +20,7 @@ public class StatusTest {
     }
 
     @Test
-    public void testEnumCount() {
+    void testEnumCount() {
         // Verify the number of enums in Status
         assertEquals(3, Status.values().length);
     }

@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class ReportRulesEntityTest {
 
     @Test
-    public void testReportRulesEntity() {
+    void testReportRulesEntity() {
         // Arrange
         ReportRulesEntity reportRulesEntity = new ReportRulesEntity();
         UUID uuid = UUID.randomUUID();

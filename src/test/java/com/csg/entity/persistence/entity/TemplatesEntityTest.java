@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class TemplatesEntityTest {
 
     @Test
-    public void testTemplatesEntity() {
+    void testTemplatesEntity() {
         // Arrange
         TemplatesEntity templatesEntity = new TemplatesEntity();
         UUID uuid = UUID.randomUUID();

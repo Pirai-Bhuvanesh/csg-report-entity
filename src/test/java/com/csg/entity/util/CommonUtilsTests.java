@@ -31,7 +31,7 @@ class CommonUtilsTests {
 	private MessageSource messageSource;
 
 	@BeforeEach
-	public void setUp() {
+	void setUp() {
 		MockitoAnnotations.openMocks(this); // Initialize mocks before each test
 	}
 

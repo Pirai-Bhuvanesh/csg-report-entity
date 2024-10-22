@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class MailStatusTest {
 
     @Test
-    public void testEnumValues() {
+    void testEnumValues() {
         // Verify enum values exist
         assertNotNull(MailStatus.REQUIRED);
         assertNotNull(MailStatus.NOT_REQUIRED);
@@ -20,7 +20,7 @@ public class MailStatusTest {
     }
 
     @Test
-    public void testEnumCount() {
+    void testEnumCount() {
         // Verify the number of enums in MailStatus
         assertEquals(3, MailStatus.values().length);
     }

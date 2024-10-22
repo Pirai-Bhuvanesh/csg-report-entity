@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class FileTypeTest {
 
     @Test
-    public void testEnumValues() {
+    void testEnumValues() {
         // Verify enum values exist
         assertNotNull(FileType.EMPLOYEE_REPORT);
         assertNotNull(FileType.TRELLIX_REPORT);
@@ -18,7 +18,7 @@ public class FileTypeTest {
     }
 
     @Test
-    public void testEnumCount() {
+    void testEnumCount() {
         // Verify the number of enums in FileType
         assertEquals(2, FileType.values().length);
     }

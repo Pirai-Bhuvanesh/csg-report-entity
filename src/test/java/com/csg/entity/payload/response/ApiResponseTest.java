@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class ApiResponseTest {
 
     @Test
-    public void testApiResponse() {
+    void testApiResponse() {
         // Arrange
         ApiResponse apiResponse = new ApiResponse();
         String message = "Request was successful";
