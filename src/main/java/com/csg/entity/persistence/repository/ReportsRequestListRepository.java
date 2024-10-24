@@ -11,4 +11,6 @@ import java.util.UUID;
 public interface ReportsRequestListRepository extends R2dbcRepository<ReportsRequestListEntity, UUID> {
 
     Mono<ReportsRequestListEntity> findByFileName(String fileName);
+
+    Mono<ReportsRequestListEntity> findByStatus(String status);
 }
