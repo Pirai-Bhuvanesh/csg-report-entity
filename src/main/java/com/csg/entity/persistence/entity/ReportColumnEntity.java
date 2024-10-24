@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
+
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -24,7 +26,7 @@ public class ReportColumnEntity {
     @LastModifiedBy
     private String modifiedBy;
     @CreatedDate
-    private LocalDateTime createdAt;
+    private Instant createdAt;
     @LastModifiedDate
-    private LocalDateTime modifiedAt;
+    private Instant modifiedAt;
 }

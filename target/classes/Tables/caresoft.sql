@@ -1,7 +1,5 @@
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
-
 CREATE TABLE IF NOT EXISTS templates (
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     template_name VARCHAR(255) NOT NULL,
@@ -77,7 +75,7 @@ CREATE TABLE IF NOT EXISTS report_rules (
 
 CREATE TABLE IF NOT EXISTS report_meta_data (
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    data TEXT NOT NULL,
+    data JSONB,
     report_meta_data_uuid UUID,
     created_by VARCHAR(255),
     modified_by VARCHAR(255),

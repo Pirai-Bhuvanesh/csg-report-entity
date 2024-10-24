@@ -13,6 +13,7 @@ com\csg\entity\persistence\repository\ReportColumnRepository.class
 com\csg\entity\exception\MonoFluxSerializationException.class
 com\csg\entity\persistence\entity\ReportsEntity.class
 com\csg\entity\persistence\entity\TemplatesEntity.class
+com\csg\entity\persistence\repository\ReportMetaDataRepository.class
 com\csg\entity\config\DBConfig.class
 com\csg\entity\config\ReactiveTypeSerializer.class
 com\csg\entity\exception\ResourceNotFoundException.class

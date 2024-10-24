@@ -2,6 +2,7 @@ package com.csg.entity.persistence.entity;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -18,8 +19,8 @@ class TemplatesEntityTest {
         String templateName = "Sample Template";
         String createdBy = "testUser";
         String modifiedBy = "testUser";
-        LocalDateTime createdAt = LocalDateTime.now();
-        LocalDateTime modifiedAt = LocalDateTime.now();
+        Instant createdAt = Instant.now();
+        Instant modifiedAt = Instant.now();
 
         // Act
         templatesEntity.setUuid(uuid);

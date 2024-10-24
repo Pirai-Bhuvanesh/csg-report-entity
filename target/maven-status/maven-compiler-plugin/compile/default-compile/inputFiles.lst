@@ -24,6 +24,7 @@ D:\cgs\csg-report-entity\src\main\java\com\csg\entity\config\ReactiveTypeDeseria
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\exception\CustomizedResponseEntityExceptionHandler.java
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\util\CommonUtils.java
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\persistence\entity\ReportsRequestListEntity.java
+D:\cgs\csg-report-entity\src\main\java\com\csg\entity\persistence\repository\ReportMetaDataRepository.java
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\util\enums\Status.java
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\persistence\entity\TemplatesEntity.java
 D:\cgs\csg-report-entity\src\main\java\com\csg\entity\persistence\repository\ReportColumnRepository.java

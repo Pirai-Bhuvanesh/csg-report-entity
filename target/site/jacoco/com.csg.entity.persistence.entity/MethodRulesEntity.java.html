@@ -4,24 +4,26 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
+
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
-<span class="fc" id="L11">@Setter</span>
+<span class="fc" id="L13">@Setter</span>
 @Table(name=&quot;method_rules&quot;)
-<span class="fc" id="L13">public class MethodRulesEntity {</span>
+<span class="fc" id="L15">public class MethodRulesEntity {</span>
 
     @Id
-<span class="fc" id="L16">    private UUID uuid;</span>
-<span class="fc" id="L17">    private String methodName;</span>
+<span class="fc" id="L18">    private UUID uuid;</span>
+<span class="fc" id="L19">    private String methodName;</span>
     @CreatedBy
-<span class="fc" id="L19">    private String createdBy;</span>
+<span class="fc" id="L21">    private String createdBy;</span>
     @LastModifiedBy
-<span class="fc" id="L21">    private String modifiedBy;</span>
+<span class="fc" id="L23">    private String modifiedBy;</span>
     @CreatedDate
-<span class="fc" id="L23">    private LocalDateTime createdAt;</span>
+<span class="fc" id="L25">    private Instant createdAt;</span>
     @LastModifiedDate
-<span class="fc" id="L25">    private LocalDateTime modifiedAt;</span>
+<span class="fc" id="L27">    private Instant modifiedAt;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

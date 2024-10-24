@@ -4,26 +4,28 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
+
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.UUID;
 
 @Getter
-<span class="fc" id="L12">@Setter</span>
+<span class="fc" id="L14">@Setter</span>
 @Table(name=&quot;report_meta_data&quot;)
-<span class="fc" id="L14">public class ReportMetaDataDetailsEntity {</span>
+<span class="fc" id="L16">public class ReportMetaDataDetailsEntity {</span>
 
     @Id
-<span class="fc" id="L17">    private UUID uuid;</span>
-<span class="fc" id="L18">    private Map&lt;String, Object&gt; data;</span>
-<span class="fc" id="L19">    private UUID reportMetaDataUuid ;</span>
+<span class="fc" id="L19">    private UUID uuid;</span>
+<span class="fc" id="L20">    private Map&lt;String, Object&gt; data;</span>
+<span class="fc" id="L21">    private UUID reportMetaDataUuid ;</span>
     @CreatedBy
-<span class="fc" id="L21">    private String createdBy;</span>
+<span class="fc" id="L23">    private String createdBy;</span>
     @LastModifiedBy
-<span class="fc" id="L23">    private String modifiedBy;</span>
+<span class="fc" id="L25">    private String modifiedBy;</span>
     @CreatedDate
-<span class="fc" id="L25">    private LocalDateTime createdAt;</span>
+<span class="fc" id="L27">    private Instant createdAt;</span>
     @LastModifiedDate
-<span class="fc" id="L27">    private LocalDateTime modifiedAt;</span>
+<span class="fc" id="L29">    private Instant modifiedAt;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

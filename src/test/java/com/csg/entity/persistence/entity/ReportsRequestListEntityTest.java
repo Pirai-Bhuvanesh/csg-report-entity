@@ -1,6 +1,8 @@
 package com.csg.entity.persistence.entity;
 
 import org.junit.jupiter.api.Test;
+
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -25,8 +27,8 @@ class ReportsRequestListEntityTest {
         int totalRowCount = 100;
         String createdBy = "testUser";
         String modifiedBy = "testUser";
-        LocalDateTime createdAt = LocalDateTime.now();
-        LocalDateTime modifiedAt = LocalDateTime.now();
+        Instant createdAt = Instant.now();
+        Instant modifiedAt = Instant.now();
 
         // Act
         reportsRequestListEntity.setUuid(uuid);

@@ -2,6 +2,7 @@ package com.csg.entity.persistence.entity;
 
 import org.junit.jupiter.api.Test;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,8 +21,8 @@ class ReportMetaDataDetailsEntityTest {
         UUID reportMetaDataUuid = UUID.randomUUID();
         String createdBy = "testUser";
         String modifiedBy = "testUser";
-        LocalDateTime createdAt = LocalDateTime.now();
-        LocalDateTime modifiedAt = LocalDateTime.now();
+        Instant createdAt = Instant.now();
+        Instant modifiedAt = Instant.now();
 
         // Create a sample Map for the 'data' field
         Map<String, Object> data = new HashMap<>();

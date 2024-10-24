@@ -5,32 +5,33 @@ import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
-<span class="fc" id="L12">@Setter</span>
+<span class="fc" id="L13">@Setter</span>
 @Table(name=&quot;reports_request_list&quot;)
-<span class="fc" id="L14">public class ReportsRequestListEntity {</span>
+<span class="fc" id="L15">public class ReportsRequestListEntity {</span>
 
     @Id
-<span class="fc" id="L17">    private UUID uuid;</span>
-<span class="fc" id="L18">    private String fileFormat;</span>
-<span class="fc" id="L19">    private String fileName;</span>
-<span class="fc" id="L20">    private UUID reportId;</span>
-<span class="fc" id="L21">    private String status;</span>
-<span class="fc" id="L22">    private String errorResponse;</span>
-<span class="fc" id="L23">    private String s3Key;</span>
-<span class="fc" id="L24">    private int successfulRowCount;</span>
-<span class="fc" id="L25">    private int unsuccessfulRowCount;</span>
-<span class="fc" id="L26">    private int totalRowCount;</span>
+<span class="fc" id="L18">    private UUID uuid;</span>
+<span class="fc" id="L19">    private String fileFormat;</span>
+<span class="fc" id="L20">    private String fileName;</span>
+<span class="fc" id="L21">    private UUID reportId;</span>
+<span class="fc" id="L22">    private String status;</span>
+<span class="fc" id="L23">    private String errorResponse;</span>
+<span class="fc" id="L24">    private String s3Key;</span>
+<span class="fc" id="L25">    private int successfulRowCount;</span>
+<span class="fc" id="L26">    private int unsuccessfulRowCount;</span>
+<span class="fc" id="L27">    private int totalRowCount;</span>
     @CreatedBy
-<span class="fc" id="L28">    private String createdBy;</span>
+<span class="fc" id="L29">    private String createdBy;</span>
     @LastModifiedBy
-<span class="fc" id="L30">    private String modifiedBy;</span>
+<span class="fc" id="L31">    private String modifiedBy;</span>
     @CreatedDate
-<span class="fc" id="L32">    private LocalDateTime createdAt;</span>
+<span class="fc" id="L33">    private Instant createdAt;</span>
     @LastModifiedDate
-<span class="fc" id="L34">    private LocalDateTime modifiedAt;</span>
+<span class="fc" id="L35">    private Instant modifiedAt;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
