@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -20,8 +20,8 @@ public class TemplatesEntity {
     @LastModifiedBy
     private String modifiedBy;
     @CreatedDate
-    private Instant createdAt;
+    private LocalDateTime createdAt;
     @LastModifiedDate
-    private Instant modifiedAt;
+    private LocalDateTime modifiedAt;
 
 }

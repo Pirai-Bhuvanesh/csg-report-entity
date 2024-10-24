@@ -8,10 +8,13 @@ com\csg\entity\util\enums\FileTypeTest.class
 com\csg\entity\exception\MonoFluxSerializationExceptionTest.class
 com\csg\entity\persistence\entity\ReportMetaDataDetailsEntityTest.class
 com\csg\entity\persistence\entity\TemplatesEntityTest.class
+com\csg\entity\util\MessageKeyConstantsTest.class
 com\csg\entity\exception\BadRequestExceptionTests.class
 com\csg\entity\util\enums\MailStatusTest.class
 com\csg\entity\config\ReactiveTypeDeserializerTests.class
+com\csg\entity\util\CsgConstantsTest.class
 com\csg\entity\config\DBConfigTests.class
+com\csg\entity\exception\CustomizedResponseEntityExceptionHandlerTests.class
 com\csg\entity\payload\response\ApiResponseTest.class
 com\csg\entity\persistence\entity\ReportsEntityTest.class
 com\csg\entity\config\ReactiveTypeSerializerTests.class

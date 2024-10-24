@@ -5,7 +5,7 @@ import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Getter
@@ -29,8 +29,8 @@ import java.util.UUID;
     @LastModifiedBy
 <span class="fc" id="L30">    private String modifiedBy;</span>
     @CreatedDate
-<span class="fc" id="L32">    private Instant createdAt;</span>
+<span class="fc" id="L32">    private LocalDateTime createdAt;</span>
     @LastModifiedDate
-<span class="fc" id="L34">    private Instant modifiedAt;</span>
+<span class="fc" id="L34">    private LocalDateTime modifiedAt;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

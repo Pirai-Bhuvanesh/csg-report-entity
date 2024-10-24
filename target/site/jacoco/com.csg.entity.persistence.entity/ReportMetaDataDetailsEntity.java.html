@@ -4,8 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
-
-import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.Map;
 import java.util.UUID;
 
 @Getter
@@ -15,15 +15,15 @@ import java.util.UUID;
 
     @Id
 <span class="fc" id="L17">    private UUID uuid;</span>
-<span class="fc" id="L18">    private String data;</span>
+<span class="fc" id="L18">    private Map&lt;String, Object&gt; data;</span>
 <span class="fc" id="L19">    private UUID reportMetaDataUuid ;</span>
     @CreatedBy
 <span class="fc" id="L21">    private String createdBy;</span>
     @LastModifiedBy
 <span class="fc" id="L23">    private String modifiedBy;</span>
     @CreatedDate
-<span class="fc" id="L25">    private Instant createdAt;</span>
+<span class="fc" id="L25">    private LocalDateTime createdAt;</span>
     @LastModifiedDate
-<span class="fc" id="L27">    private Instant modifiedAt;</span>
+<span class="fc" id="L27">    private LocalDateTime modifiedAt;</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

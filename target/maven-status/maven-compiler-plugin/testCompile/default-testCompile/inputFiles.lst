@@ -1,10 +1,13 @@
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\config\ReactiveTypeSerializerTests.java
+D:\cgs\csg-report-entity\src\test\java\com\csg\entity\exception\CustomizedResponseEntityExceptionHandlerTests.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\exception\ResourceNotFoundExceptionTests.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\MethodRulesEntityTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\ReportsRequestListEntityTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\util\enums\FileTypeTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\exception\BadRequestExceptionTests.java
+D:\cgs\csg-report-entity\src\test\java\com\csg\entity\util\MessageKeyConstantsTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\TemplatesEntityTest.java
+D:\cgs\csg-report-entity\src\test\java\com\csg\entity\util\CsgConstantsTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\persistence\entity\ReportColumnEntityTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\util\enums\StatusTest.java
 D:\cgs\csg-report-entity\src\test\java\com\csg\entity\config\DBConfigTests.java

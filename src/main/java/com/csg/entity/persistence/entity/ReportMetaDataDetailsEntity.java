@@ -4,8 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
-
-import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.Map;
 import java.util.UUID;
 
 @Getter
@@ -15,14 +15,14 @@ public class ReportMetaDataDetailsEntity {
 
     @Id
     private UUID uuid;
-    private String data;
+    private Map<String, Object> data;
     private UUID reportMetaDataUuid ;
     @CreatedBy
     private String createdBy;
     @LastModifiedBy
     private String modifiedBy;
     @CreatedDate
-    private Instant createdAt;
+    private LocalDateTime createdAt;
     @LastModifiedDate
-    private Instant modifiedAt;
+    private LocalDateTime modifiedAt;
 }

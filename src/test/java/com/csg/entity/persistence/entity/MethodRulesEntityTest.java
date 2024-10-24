@@ -2,7 +2,7 @@ package com.csg.entity.persistence.entity;
 
 import org.junit.jupiter.api.Test;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,8 +18,8 @@ class MethodRulesEntityTest {
         String methodName = "testMethod";
         String createdBy = "testUser";
         String modifiedBy = "testUser";
-        Instant createdAt = Instant.now();
-        Instant modifiedAt = Instant.now();
+        LocalDateTime createdAt = LocalDateTime.now();
+        LocalDateTime modifiedAt = LocalDateTime.now();
 
         // Act
         methodRulesEntity.setUuid(uuid);
