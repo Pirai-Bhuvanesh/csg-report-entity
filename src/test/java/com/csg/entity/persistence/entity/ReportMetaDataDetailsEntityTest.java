@@ -1,9 +1,11 @@
 package com.csg.entity.persistence.entity;
 
+import com.csg.entity.persistence.entity.ReportMetaDataDetailsEntity;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -14,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 class ReportMetaDataDetailsEntityTest {
 
     @Test
-    void testReportMetaDataDetailsEntity() {
+    void testReportMetaDataDetailsEntity() throws JsonProcessingException {
         // Arrange
         ReportMetaDataDetailsEntity reportMetaDataDetailsEntity = new ReportMetaDataDetailsEntity();
         UUID uuid = UUID.randomUUID();
@@ -29,9 +31,13 @@ class ReportMetaDataDetailsEntityTest {
         data.put("key1", "value1");
         data.put("key2", 123);
 
+        // Convert Map to JSON String for comparison
+        ObjectMapper mapper = new ObjectMapper();
+        String expectedDataJson = mapper.writeValueAsString(data);
+
         // Act
         reportMetaDataDetailsEntity.setUuid(uuid);
-        reportMetaDataDetailsEntity.setData(data);
+        reportMetaDataDetailsEntity.setDataFromMap(data); // Use new method for serialization
         reportMetaDataDetailsEntity.setReportMetaDataUuid(reportMetaDataUuid);
         reportMetaDataDetailsEntity.setCreatedBy(createdBy);
         reportMetaDataDetailsEntity.setModifiedBy(modifiedBy);
@@ -41,7 +47,7 @@ class ReportMetaDataDetailsEntityTest {
         // Assert
         assertNotNull(reportMetaDataDetailsEntity.getUuid());
         assertEquals(uuid, reportMetaDataDetailsEntity.getUuid());
-        assertEquals(data, reportMetaDataDetailsEntity.getData());
+        assertEquals(expectedDataJson, reportMetaDataDetailsEntity.getData()); // Compare JSON strings
         assertEquals(reportMetaDataUuid, reportMetaDataDetailsEntity.getReportMetaDataUuid());
         assertEquals(createdBy, reportMetaDataDetailsEntity.getCreatedBy());
         assertEquals(modifiedBy, reportMetaDataDetailsEntity.getModifiedBy());

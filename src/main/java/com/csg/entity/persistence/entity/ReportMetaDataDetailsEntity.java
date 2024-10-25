@@ -1,24 +1,25 @@
 package com.csg.entity.persistence.entity;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.*;
 import org.springframework.data.relational.core.mapping.Table;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.UUID;
 
 @Getter
 @Setter
-@Table(name="report_meta_data")
+@Table(name = "report_meta_data")
 public class ReportMetaDataDetailsEntity {
 
     @Id
     private UUID uuid;
-    private Map<String, Object> data;
-    private UUID reportMetaDataUuid ;
+    private String data;
+    private UUID reportMetaDataUuid;
     @CreatedBy
     private String createdBy;
     @LastModifiedBy
@@ -27,4 +28,8 @@ public class ReportMetaDataDetailsEntity {
     private Instant createdAt;
     @LastModifiedDate
     private Instant modifiedAt;
+    public void setDataFromMap(Map<String, Object> dataMap) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        this.data = mapper.writeValueAsString(dataMap);
+    }
 }
