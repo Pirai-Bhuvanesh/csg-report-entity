@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS report_rules (
 
 CREATE TABLE IF NOT EXISTS report_meta_data (
     uuid UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    data JSONB,
+    data TEXT,
     report_meta_data_uuid UUID,
     created_by VARCHAR(255),
     modified_by VARCHAR(255),
