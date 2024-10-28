@@ -28,8 +28,4 @@ public class ReportMetaDataDetailsEntity {
     private Instant createdAt;
     @LastModifiedDate
     private Instant modifiedAt;
-    public void setDataFromMap(Map<String, Object> dataMap) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper();
-        this.data = mapper.writeValueAsString(dataMap);
-    }
 }
